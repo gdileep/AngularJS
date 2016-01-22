@@ -1,0 +1,10 @@
+<div ng-show='!!module.description && !collapsed' ng-click="collapseDescription()">
+      <h4>Description:</h4>
+      {{module.description.owner}} <br />
+      {{module.description.team}}
+</div>
+<div ng-show='!!module.description && collapsed' ng-click="expandDescription()">
+  <h4>Description:</h4>
+  {{module.description.owner}}...
+</div>
+    

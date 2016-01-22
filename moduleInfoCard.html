@@ -1,0 +1,18 @@
+
+    <div class="panel panel-primary">
+      <div class="panel-heading" ng-click="collapse()">{{module.name}}</div>
+      <div class="panel-body" ng-hide="collapsed">
+        <description></description>
+        <h4>Members:</h4>
+        <ul>
+          <li ng-repeat="member in module.members">
+        {{member}}
+        <remove-friend></remove-friend>
+      </li>
+        </ul>
+        <div ng-show="!!module.status">
+      Status: {{module.status}}
+    </div>
+        <button ng-show="!module.status" class="btn btn-success" ng-click="chkStatus(module)">Check Status</button>
+      </div>
+    </div>
